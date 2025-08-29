@@ -15,6 +15,7 @@
 ---
 
 ## DETALHES (FALTA SÓ ESSE)
+- Gráfico precisa contar os que mais rodaram, maior quilometragem da plataforma
 - Correção da ordenação da coluna “Duração da parada” – Tela principal Veículo(s) Off-line (SimovSat)
 
 <!-- 
@@ -44,10 +45,4 @@ Se estiver usando uma lib de tabela como Vue Table, AG Grid ou similar:
 rows.sort((a, b) => parseTimeToSeconds(b.duracaoParada) - parseTimeToSeconds(a.duracaoParada));
 🎯 Resultado esperado:
 Ao aplicar essa regra, a coluna “Duração da parada” será corretamente ordenada do maior tempo para o menor, mesmo que visualmente continue aparecendo no formato "XXh YYmin ZZs". -->
----
-
-
-
-## API
-- VERIRICAR MÉTODO INADIMPLENTE E ADIMPLENTE
 ---
