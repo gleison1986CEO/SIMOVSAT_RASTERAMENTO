@@ -1,0 +1,66 @@
+# SIMOVSAT
+- BAIXAR TUDO DA WEB (PHP SIMOVSAT)
+---
+
+
+## API
+- VERIRICAR MÉTODO INADIMPLENTE E ADIMPLENTE
+---
+
+
+## WEB
+- ANOTAR O QUE COMBINEI COM ELE PRA FAZER AQUI
+- CORREÇÕES ANOTAR AQUI (VALOR 1500)
+- CORREÇÕES ANOTAR AQUI (VALOR 1000)
+---
+
+
+## OBJETIVO
+- Corrigir ordenação de parada e exibir placa do veículo nos relatórios
+---
+
+## REGRAS  SOLUÇÃO 01
+- NO RELATÓRIO MUDAR NOME DO USUARIO PARA PLACA
+- LOGO MARCA NA APARECE EM ALGUNS PONTOS DO SISTEMA
+- VALOR 300
+---
+
+
+## REGRAS  SOLUÇÃO 02
+- REGRAS DO GRÁFICO ESTAO ERRADAS E PRECISAM DE CORREÇÃO
+- ESSE GRÁFICO É AQUELE QUE FIZEMOS DA OUTRA VEZ(EXTERNO E CORRIGIDO) E PERDEMOS PQ O SERVIDOR FOI APAGADO.
+- VALOR 1000
+- PRAZO 12 DIAS "UTEIS".
+---
+
+## DETALHES
+- Correção da ordenação da coluna “Duração da parada” – Tela principal Veículo(s) Off-line (SimovSat)
+
+<!-- 
+Problema:
+A coluna “Duração da parada” está sendo ordenada de forma incorreta porque está tratada como string (texto). Assim, valores como "126h 46min" ficam abaixo de "9h 3min", pois a ordenação compara os primeiros caracteres e não o tempo real em segundos.
+
+⸻
+
+✅ Regra para correção da ordenação
+	1.	Converter os tempos exibidos na coluna “Duração da parada” para segundos totais, de forma invisível ao usuário, para que a ordenação seja feita corretamente.
+	2.	Função JavaScript sugerida para conversão:
+function parseTimeToSeconds(str) {
+  const regex = /(?:(\d+)h)?\s*(?:(\d+)min)?\s*(?:(\d+)s)?/;
+  const [, h = 0, m = 0, s = 0] = str.match(regex).map(Number);
+  return (h * 3600) + (m * 60) + s;
+}
+3.	Aplicar essa função no sorting da tabela, seja por:
+	•	DataTables.js com data-order oculto;
+	•	Vue.js com computed ou sortMethod;
+	•	Ou no backend, retornando já o tempo total em segundos no JSON da API como parada_em_segundos.
+
+⸻
+
+🧭 Exemplo de implementação simples no frontend:
+
+Se estiver usando uma lib de tabela como Vue Table, AG Grid ou similar:
+rows.sort((a, b) => parseTimeToSeconds(b.duracaoParada) - parseTimeToSeconds(a.duracaoParada));
+🎯 Resultado esperado:
+Ao aplicar essa regra, a coluna “Duração da parada” será corretamente ordenada do maior tempo para o menor, mesmo que visualmente continue aparecendo no formato "XXh YYmin ZZs". -->
+---
