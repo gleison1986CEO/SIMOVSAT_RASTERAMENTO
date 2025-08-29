@@ -1,0 +1,25 @@
+<?php
+return [
+    'checklists' => env('SERVICE_CHECKLISTS', false),
+    'widget_template' => env('WIDGET_TEMPLATE_WEBHOOK', null),
+    'devices_bulk_delete' => env('bulk_objects_delete', false),
+    'custom_fields' => env('ENABLE_CUSTOM_FIELDS', false),
+    'notification_popops' => env('SHOW_POPUPS', false),
+    'google_styled' => env('google_styled', false),
+    'negative_device_service' => env('NEGATIVE_DEVICE_SERVICE', false),
+    'custom_device_add' => env('ENABLE_CUSTOM_DEVICE_ADD', false),
+    'device_type' => env('ENABLE_DEVICE_TYPE', false),
+    'html_geolocation' => env('HTML_GEOLOCATION', false),
+    'alert_time_duration' => env('ALERT_TIME_DURATION', false),
+    'engine_hours_current_report' => env('ENGINE_HOURS_CURRENT_REPORT', false),
+    'device_app_single_usage' => env('DEVICE_APP_SINGLE_USAGE', false),
+    'media_categories' => env('ENABLE_MEDIA_CATEGORIES', false),
+    'device_tracker_app_login' => env('ENABLE_TRACKER_APP_LOGIN', false),
+    'external_url' => env('ENABLE_EXTERNAL_URL', false),
+    'sensor_remote' => [
+        'status' => env('SENSOR_REMOTE', false),
+        'token' => env('SENSOR_REMOTE_TOKEN'),
+        'method' => env('SENSOR_REMOTE_METHOD'),
+        'url' => env('SENSOR_REMOTE_URL'),
+    ],
+];

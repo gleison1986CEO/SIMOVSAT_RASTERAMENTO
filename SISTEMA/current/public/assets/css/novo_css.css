@@ -1,0 +1,214 @@
+/* graficos*/
+/* graficos*/
+/* graficos*/
+@media only screen and (max-width: 1300px) {
+  #alertas_device_overview{
+  font-size:13px !important;
+  }
+}
+
+#icones_graficos{
+  width:23px;
+  color:#000000 !important;
+}
+
+#loading .backdrop, .loading .backdrop {
+    background-color: transparent !important;
+    opacity: .5;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  #dashboard .modal-content {
+    min-height: calc(100vh - 20px);
+    background:#ffffff !important;
+    border-radius: 6px;
+  }
+
+  #grafico_titulos{
+    color:#272727 !important;
+  }
+
+
+  #dashboard .dashboard-block .stat-box {
+    display: block;
+    padding: 30px !important;
+    margin-bottom: 17px !important;
+    border: 0px solid transparent !important;
+    border-radius: 16px !important;
+    color: #202020;
+    text-align: center;
+    height: 150px !important;
+  }
+
+  #link__{
+    background-color:#ffffff;
+    padding:10px;
+
+  }
+
+  #border_2{
+    background-color: #f2f2f2;
+    color:#000000;
+    text-align: center;
+  }
+  #border_{
+    background-color:#3377ff !important; border:none; padding:13px; color:#ffffff; text-align:center; border-top-left-radius:20px;
+  }
+
+
+  #img_logo{
+    width:120px;
+  }
+
+  #widgets .panel .widget-title .icon, #widgets .plan .widget-title .icon, .panel #widgets .widget-title .icon, .panel .panel-title .icon, .panel .panel-title-overflow .icon, .plan #widgets .widget-title .icon, .plan .panel-title .icon, .plan .panel-title-overflow .icon, .plan .plan-title .icon {
+    font-size: inherit !important;
+    color: #ddd !important;
+    vertical-align: middle;
+  }
+
+
+  .dropdown-menu, .leaflet-control-layers .leaflet-control-layers-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left !important;
+    min-width: 196px;
+    margin-left: -70px;
+    min-height: 160px;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 12px;
+    text-align: left;
+    background-color: #a1a1a1!important;
+    border: 1px solid #1b1b1b !important;
+    border: none !important;
+    border-radius: 12px !important;
+    margin-top: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+    color: #ffffff!important;
+    margin-top: 30px;
+  }
+
+  #ultimos_alertas__ {
+    background-color: transparent !important;
+    margin-bottom: 10px;
+    padding: 10px;
+      padding-top: 10px;
+    border-top-left-radius: 4px;
+    color: #000000!important;
+    font-weight: 400;
+    border-bottom-left-radius: 4px;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+/* graficos*/
+/* graficos*/
+/* graficos*/
+
+
+.bs-searchbox .form-control {
+  margin-bottom: 0;
+  width: 100%;
+  float: none;
+  color:#000000 !important;
+  background-color: #ffffff!important;  
+  border-radius: 5px !important;
+  max-width: 380px !important;
+  margin-left:20px;
+  margin-top: -15px !important;
+  margin-bottom: 20px !important;
+
+}
+
+
+#baixar_app{
+    padding:20px;
+    margin-top:15px;
+    margin-bottom: 15px;
+    background-color: red;
+    text-align: center;
+    font-weight: boold;
+    color:#ffffff;
+}
+
+#android_{
+  display: none !important;
+}
+#icon_android_{
+    width: 19px;
+    display: none;
+  
+}
+#painel_{
+    border-radius: 12px !important;
+}
+#button_{
+    border-radius: 37px !important;
+    margin-top: 10px;
+    background-color: #990000;
+    font-weight: bold;
+    padding:13px !important;
+    text-transform: uppercase;
+    border:none;
+}
+#button_2{
+    border-radius: 37px !important;
+    margin-top: 10px;
+    background-color: transparent !important;
+    font-weight: bold;
+    color:grey;
+    text-transform: uppercase;
+    border:none;
+}
+.form-control{
+    border-radius: 6px !important;
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    padding:14px !important;
+    color:#3b3b3b;
+    height:50px;
+    text-transform: uppercase;
+    border:none;
+}
+#body_form_{
+    padding:29px;
+}
+#checkbox_{
+
+    padding:14px;
+}
+
+body.sign-in-layout {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #990000;
+    background-image: url('https://serviseletronica.com.br/wp-content/uploads/2022/05/imagem-app-scaled-1.jpg');
+  }
+
+  #text_data_notes{
+    font-size:10px;
+    padding:5px;
+  }
+
+  .datetimepicker > div {
+    color: black !important;
+  }
+
+  .datetimepicker table tr td.new, .datetimepicker table tr td.old {
+    color: #990000 !important;
+  }

@@ -1,0 +1,33 @@
+{
+  "name": "GPS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:martynask/Family-Locator.git"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "ioredis": "^3.2.2",
+    "natives": "^1.1.6",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.2.0",
+    "gulp-concat": "2.6.1",
+    "gulp-group-files": "^2.0.0",
+    "gulp-minify": "^1.0.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.0"
+  }
+}
