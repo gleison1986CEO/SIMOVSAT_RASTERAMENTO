@@ -1,0 +1,387 @@
+1 ----------------
+Sincronismo SGA
+
+Nome (associado/cliente/usuário)
+Celular (associado/cliente/usuário)
+
+
+Marca (veículo)
+Modelo (veículo)
+Ano (veículo) 
+Fipe (veículo)
+
+
+2 ----------------
+Regra do sincronismoclear
+
+Ativos entre datas xx/xx/xxxx à yy/yy/yyy
+
+Classificação veículo >> aguardando instalação de rastreador
+
+
+3 ------------------
+
+Regra do sincronismo
+
+Ativos entre datas xx/xx/xxxx à yy/yy/yyy
+
+Classificação veículo >> aguardando instalação de rastreador
+
+
+
+
+
+####  Carteira de Motorista >> troca essa informação para Tabela Fipe
+
+####  de upload (com banco de dados) igual a formato do GVox para Chip M2M e IMEI Essa aba pode chamar de estoque
+
+7 - Painel de controle está com cores que não permitem visualizar;
+
+
+
+
+https://api.hinova.com.br/api/sga/v2/doc/#api-Associado-Listar_Situa__o
+
+		"codigo_veiculo": 999,
+			"placa": "AAA-111",
+			"chassi": "999999999999",
+			"valor_fixo" : 99.99,
+			"codigo_situacao": "9",
+			"valor_fipe": 99999999,
+			"descricao_situacao": "ATIVO",
+			"descricao_modelo": "MODELO VEICULO",
+			"codigo_modelo": "99999",
+			"codigo_veiculo_indicador": 99,
+			"placa_veiculo_indicador": "AAA-9999",
+			"codigo_associado_indicador": 9,
+			"cpf_associado_indicador": 99999999,
+			"nome_associado_indicador": "HINOVA SOLUÇÕES DIGITAIS"
+
+#### 1 - veiculo_fipe
+
+CREATE TABLE veiculo_fipe (
+
+    id INT NOT NULL AUTO_INCREMENT,
+    descricao_situacao VARCHAR(545) NOT NULL,
+    nome_associado_indicador VARCHAR(545) NOT NULL,
+    cpf_associado_indicador VARCHAR(545) NOT NULL,
+    veiculo VARCHAR(545) NOT NULL,
+    placa VARCHAR(545) NOT NULL,
+    chassi VARCHAR(545) NOT NULL,
+    valor_fixo VARCHAR(545) NOT NULL,
+    codigo_situacao VARCHAR(545) NOT NULL,
+    marca_veiculo VARCHAR(545) NOT NULL,
+    codigo_modelo VARCHAR(545) NOT NULL,
+    descricao_modelo VARCHAR(545) NOT NULL,
+    codigo_veiculo_indicador VARCHAR(545) NOT NULL,
+    ano_veiculo VARCHAR(545) NOT NULL,
+    valor_fipe VARCHAR(545) NOT NULL,
+    data datetime NOT NULL,
+    PRIMARY KEY(id)
+
+);
+
+TRAZER DO SGA E
+QUERY GUARDAR TODOS OS VEÍCULOS COM TAXA FIPE
+
+#### 1 - Estoque de chip M2M
+
+CREATE TABLE estoque_chip (
+    id INT NOT NULL AUTO_INCREMENT,
+    situacao_chip VARCHAR(545) NOT NULL,
+    chip VARCHAR(545) NOT NULL,
+    numero VARCHAR(545) NOT NULL,
+    nome VARCHAR(545) NOT NULL,
+    data datetime NOT NULL,
+    PRIMARY KEY(id)
+);
+QUERY GUARDAR TODOS OS CHIPS M2M
+
+
+#### 2 - Estoque de aparelho Daí ele vincula na hora da instalação o M2M com aparelho rastreador
+
+CREATE TABLE estoque_aparelho (
+    id INT NOT NULL AUTO_INCREMENT,
+    situacao_aparelho VARCHAR(545) NOT NULL,
+    imei VARCHAR(545) NOT NULL,
+    rastreador VARCHAR(545) NOT NULL,
+    data datetime NOT NULL,
+    PRIMARY KEY(id)
+);
+QUERY GUARDAR TODOS OS APARELHOS NOVOS
+
+
+
+#### 3 - desativar Inadimplentes com sincronismo
+sincronizar sga com o banco de dados atual pesquisando 
+quem esta inadimplemente no SGA e adcionar inadimplemencia ao usuario no sistema atual
+
+
+
+#### 4 - Remoção
+regras de remoção: 
+buscar no SGA inadimplentes e reconhecer  quais estão por mais de 30 dias 
+para agendar agendar remoção do aparelho via BOT/zap por mensagem automatica.
+
+
+
+####  2º sincronizar SGA
+regras novo SYNC:
+
+
+
+####  3º sincronizar webAssist
+regras novo WEBASSIST:
+
+
+###############
+
+#########   Pesquisa de compartilhamento ainda estar por nome, não tá por placa… Só faltou isso  grafico POPUP
+
+
+#########  1 - Painel de estatística >> trazer as informações do painel principal para o painel de estatística: mover, ocioso, pare, off-line, inativo e nunca conectado;
+Obs: veículo e rastreador é a mesma coisa. Então pode ocultar o de rastreador.
+Essas informações precisam ser pegas no banco de dados a cada minuto para ao Dashboard informações mais reais…
+
+########## atualizar por minuto todas as informações
+Dashboard de alertas: alerta do veiculo, alerta de conexão, manutenção preventiva, alerta anti-fraude e bateria desconectada precisa ser atualizado com informação do banco de dados em minuto para ficar mais preciso.
+Imagem acima representa os dois pedidos
+
+##########   Verificar o motivo de não conseguir incluir mais mapas pelo sistema
+
+##########   Área de compartilhamento de link precisa haver pesquisa por placa, não por nome;
+
+##########   Voltar a cor original do painel de controle para mudança sem gerar conflito é o mesma imagem acima.
+
+##########   Aba editar veículo para alterar no front-end as informações para no futuro gerar relatório com os dados do banco de dados; 
+
+########## d) Amarelo >> Modelo do veículo << na imagem considerar só modelo, pois essa informação vira do SGA;
+
+
+##########  Carteira de motorista deve ser modelo do veículo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Atualização Fev/marc 2023
+1 - Painel de estatística >> trazer as informações do painel principal para o painel de estatística: mover, ocioso, pare, off-line, inativo e nunca conectado;
+Obs: veículo e rastreador é a mesma coisa. Então pode ocultar o de rastreador.
+Essas informações precisam ser pegas no banco de dados a cada minuto para ao Dashboard informações mais reais…
+2 - Dashboard de alertas: alerta do veiculo, alerta de conexão, manutenção preventiva, alerta anti-fraude e bateria desconectada precisa ser atualizado com informação do banco de dados em minuto para ficar mais preciso.
+5 - Voltar a cor original do painel de controle para mudança sem gerar conflito é o mesma imagem acima.
+6 - Verificar o motivo de não conseguir incluir mais mapas pelo sistema
+7 - Área de compartilhamento do link do Mapa está com cor de fundo que não é possível achar o usuário e como já combinamos tem que mudar a busca para placa
+👆🏼 essa é a área que a cor não dá pra ver o usuário para escolher e também precisa mudar de nome de usuário a busca, para busca pela placa
+9 - Aba editar veículo para alterar no front-end as informações para no futuro gerar relatório com os dados do banco de dados;
+a) Verde >> Fornecedor M2M;
+
+b) Vermelho >> Data de ativação do SIM;
+
+c) Azul >> Data de validade do SIM;
+
+d) Amarelo >> Modelo do veículo << na imagem considerar só modelo, pois essa informação vira do SGA;
+
+e) Laranja >> Tabela Fipe
+Isso vai ser importante para quando definirmos os relatórios de operação… 
+Ex.: 
+I - Ordenar instalação de rastreador dos veículos mais caros para os mais baratos. >> esse é o motivo da informação Tabela Fipe 
+
+II - Veículos que estão inativos ou inadimplentes >> será necessário fazer suspensão dos chips M2M >> daí a função Fornecedor M2M
+
+III - Modelo isso facilita qnd veículo foi roubado, daí informar esses detalhes facilita e não precisa ir lá no SGA, já vai estar aí
+As outras funções já eram nativas do sistema, então vamos deixar só mudei as ordens pra ficar com visualização mais organizada
+10 - informação sobre as atualizações de layout que preciso deixar registrado, precisamos tornar essa plataforma totalmente diferente da GVox, 
+então na sua busca encontre: local de ícone - troque para outros, fonte de toda o front-end troque para fonte diferente da atual, 
+sempre que ver busca pelo usuário de preferência para busca de veículos e sempre deixe anotado onde estão essas informações, 
+pois iremos sempre atualizar layout e Back-end para deixarmos a plataforma única. Mas antes de mudar o 
+código é importante ver com Marivan se já existe customização automática na plataforma….
+
+
+
+
+
+
+
+
+
+
+
+
+###############
+
+
+ORDEM::::::::::::::::::::::::::::::::::::::
+
+Placa, chip M2M, imei, modelo rastreador, última conexão, daí outras informações pertinentes ao relatório
+
+ORDEM::::::::::::::::::::::::::::::::::::::
+
+
+trazer numero do chip e grafico
+
+Em azul === A busca pelo nome, caso seja associado com diversas placa, não vou saber qual é a correta.  (OK) 
+Em verde ===  Ter o endereço ao lado, pois eu só consigo visualizar endereço clicando em cima dele. Em caso de sindicância, eu preciso copiar todo relatorio por 1 mes, então nao tem como eu clicar um a um para salvar. 
+Em vermelho === Ter a opção de latitude e longitude do endereço, pois nem sempre aparece o nome da rua conforme nesse, então não consigo saber. No sistema antigo quando ocorria isso, eu puxava pela latitude e longitude e jogava no google maps
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+
+Sim. Então vamos fazer os relatórios, criar o sincronismo para qnd tiver: inadimplente, inativo ou cancelado tirar o acesso do usuário (não vai conseguir acessar se tiver devendo)
+
+
+
+
+
+SGA traz as informações que precisamos colocar numa tabela idêntica do banco de dados GVox (sem Chip M2M e imei) daí importamos para essa tabela por meio manual ou CSV os imei e chip M2M, então daí subimos para o banco de dados do GVox…
+SGA leva dados >> usuário+veículos>> importação CSV ou manual leva imei + chip m2m pra tabela >> salvo em sistema a parte leva tudo direto para o banco de dados do GVox
+
+
+
+
+
+
+
+///////////////////////////////////////////////
+
+Alerta de Veículos
+
+
+1 - on-line;
+
+2 - off-line; 
+
+3 - ocioso;
+
+4 - conectado;
+
+5 - parado;
+
+6 - em movimento;
+
+7 - Ignição ligada;
+
+8 - Ignição desligada;
+
+9 - área de risco
+
+10 -  Acesso suspenso;
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
+Alerta  Perigo de Fraude
+
+A) Desconexão de bateria;
+
+B) Bateria Baixa;
+
+C) Violação de sensor luminosidade;
+
+D) 48h sem comunicação; 
+
+E) 72h sem comunicação; 
+
+F) área de risco;
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
+
+Alerta de Conexão 
+
+1 - Conectado (verde forte);
+2 - sem comunicar 1h, 2h, 3h, 4h, 5h e 6h >> do verde forte para verde claro;
+3 - sem comunicar 7h à 12h >> amarelo claro para amarelo escuro;
+4 - sem comunicar 24h à 48h >> laranja claro para laranja escuro;
+5 - sem comunicar 72h à nunca conectado >> vermelho claro para vermelho escuro; 
+
+Obs.: todas as informações do gráfico são clicáveis para relatório de veículos das respectivas situações.
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
+
+
+Outro gráfico é: qnt de veículos dentro de cada cerca criada de risco. Ex.: 10% veículos na cerca Vila kenedy, 28% veículos na cerca Chapadão, 22% na cerca morro do urubu e 40% fora da cerca de área de risco.
+
+A) De resto é criar sincronismo automático todo dia após as 18:00;
+B) inadimplentes, inativos e nunca conectados ir para outra conta (perguntar ao 
+Marivan);
+c) grafico muddar nome para placa
+d) conferir layout respónsivo
+e) Trocar a informação da URL depois para: rastreamento & monitoramento veicular
+irar coluna data de validade
+
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
+
+Relatórios e Gráficos(pizza, colunas e etc):
+1 - Alertas;
+2 - Últimas posições;
+3 - Posições entre datas;
+4 - Conexões com filtro de tempo (ex.: 60 minutos sem conexão, 3 horas sem conexão, 1 dia e por aí vai);
+5 - Usuário (nome, veículo, placa, chip, imei);
+
+6 - Nível de bateria (com filtro de nível bateria fraca para maior nível de bateria);
+7 - Alerta de início jornada, pausa de jornada e fim de jornada de trabalho.
+8- Dados de desconexão com filtro de veículo com maior valor Fipe para menor valor Fipe (busca no banco dados do SGR);
+Vê se tem esses relatórios que eu preciso e vamos renomear ou separar em gráficos de pizza
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
+A) De resto é criar sincronismo automático todo dia após as 18:00;
+B) inadimplentes, inativos e nunca conectados ir para outra conta (perguntar ao 
+Marivan);
+C) Layout com aletas de 1h, 2h, 3h, 6h, 12h, 24h, 72h e x dias sem conectar, variando as cores do verde para amarelo claro e escurecer até o vermelho forte, passando pelo laranja;
+
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
