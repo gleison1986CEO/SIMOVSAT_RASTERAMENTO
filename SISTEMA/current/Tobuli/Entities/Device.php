@@ -1334,6 +1334,8 @@ class Device extends Eloquent implements FcmTokenableInterface
             ->implode('email', ', ');
     }
 
+
+
     public function getImageAttribute()
     {
         $path = str_finish(self::IMAGE_PATH, '/') . "{$this->id}.*";

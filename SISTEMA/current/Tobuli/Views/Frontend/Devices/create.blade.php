@@ -43,7 +43,7 @@
                 {!!Form::label('name', trans('validation.attributes.name').'*:')!!}
                 {!!Form::text('name', null, ['class' => 'form-control'])!!}
             </div>
-
+            
             @if(Auth::user()->can('edit', $item, 'imei'))
                 <div class="form-group">
                     <label for="imei">

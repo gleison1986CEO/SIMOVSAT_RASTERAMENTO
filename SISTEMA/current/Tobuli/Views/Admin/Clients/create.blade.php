@@ -31,6 +31,7 @@
         <div id="client-add-form-main" class="tab-pane active">
             <div class="form-group">
                 <div class="checkbox">
+                    
                     {!! Form::checkbox('active', 1, 1) !!}
                     {!! Form::label(null, trans('validation.attributes.active')) !!}
                 </div>
