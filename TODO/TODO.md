@@ -11,11 +11,10 @@
 ## REGRAS 
 - NO RELATÓRIO MUDAR NOME DO USUARIO PARA PLACA
 - LOGO MARCA NA APARECE EM ALGUNS PONTOS DO SISTEMA
+- Corrigir ordenação de parada e exibir placa do veículo nos relatórios
 ---
 
 ## DETALHES (FALTA SÓ ESSE)
-- Corrigir ordenação de parada e exibir placa do veículo nos relatórios
-- ESSE GRÁFICO É AQUELE QUE FIZEMOS DA OUTRA VEZ(EXTERNO E CORRIGIDO) E PERDEMOS PQ O SERVIDOR FOI APAGADO.
 - Correção da ordenação da coluna “Duração da parada” – Tela principal Veículo(s) Off-line (SimovSat)
 
 <!-- 
