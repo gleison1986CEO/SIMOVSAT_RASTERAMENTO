@@ -41,12 +41,8 @@
 
 
                         <div class="dropdown">
-                            <button class="dropbtn" style="background-color:transparent; border:2px solid red; padding:4px; border-radius:7px; margin-top:6px;">Estoque</button>
-                            <div class="dropdown-content">
-                                <!-- <a href="http://simovsat.com.br/admin/users/clients/painel_estatisticas"><i class="fa fa-bar-chart" style="margin-right:6px !important;  color: #000000 !important" aria-hidden="true"></i>estatísticas</a>-->
-                                <a href="http://simovsat.com.br/admin/users/clients/chip"><i class="fa fa-mobile" style="margin-right:6px !important;  color: #000000 !important" aria-hidden="true"></i>Estoque</a>
-                            </div>
-                          </div>
+                            <a href="http://simovsat.com.br/admin/users/clients/chip"><button class="dropbtn" style="background-color:transparent; border:2px solid red; padding:4px; border-radius:7px; margin-top:6px;">Estoque</button></a>
+                        </div>
 
                        
                     </li>
