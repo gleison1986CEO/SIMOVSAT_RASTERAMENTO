@@ -10,6 +10,7 @@
 ---
 
 ## DETALHES (FALTA SÓ ESSE)
+- TODOS OS NOMES PARA PLACA.
 - Gráfico precisa contar os que mais rodaram, maior quilometragem da plataforma
 - Correção da ordenação da coluna “Duração da parada” – Tela principal Veículo(s) Off-line (SimovSat)
 ---
