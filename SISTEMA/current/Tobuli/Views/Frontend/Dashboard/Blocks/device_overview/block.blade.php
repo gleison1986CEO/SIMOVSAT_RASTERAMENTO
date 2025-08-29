@@ -5,6 +5,6 @@
 @section('header')
     <a  style="text-decoration: none !important;">
     <i class="fa fa-bullseye" id="icones_graficos" aria-hidden="true"></i>
-    <span id="grafico_titulos"> status de rastreadores</span>
+    <span id="grafico_titulos"> STATUS/MOVIMENTAÇÃO</span>
     </a>
 @stop

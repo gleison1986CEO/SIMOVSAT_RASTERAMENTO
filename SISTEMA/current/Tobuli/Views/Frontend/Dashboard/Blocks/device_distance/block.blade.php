@@ -6,7 +6,7 @@
 
     <a  style="text-decoration: none !important;">
     <i class="fa fa-location-arrow" id="icones_graficos"aria-hidden="true"></i>
-   <span id="grafico_titulos"> distância percorrida</span>
+    <span id="grafico_titulos"> DISTÂNCIA PERCORRIDA</span>
     </a>
 
 

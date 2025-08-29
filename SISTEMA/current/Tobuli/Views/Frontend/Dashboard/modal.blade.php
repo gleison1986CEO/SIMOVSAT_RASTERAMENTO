@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>×</span></button>
                 <h4 class="modal-title">
-                   <img id="img_logo"src="http://atise.website/SIMOVSAT/APP/imagens/logo.png"></img>
+                   <img id="img_logo"src="https://simovsat.com.br/images/logo-main.png?t=1684507439"></img>
                 </h4>
             </div>
         </div>

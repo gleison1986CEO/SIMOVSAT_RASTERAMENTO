@@ -2,7 +2,7 @@
 
 @section('header')
     <a  style="text-decoration: none !important;">
-        <img id="icones_graficos"src="http://atise.website/SIMOVSAT/APP/imagens/icone_menus.png"></img>
-        <span id="grafico_titulos"> ligados e desligados</span>
+        <i class="fas fa-layer-group" id="icones_graficos"aria-hidden="true"></i>
+        <span id="grafico_titulos"> ATIVO/INATIVO</span>
     </a>
 @stop

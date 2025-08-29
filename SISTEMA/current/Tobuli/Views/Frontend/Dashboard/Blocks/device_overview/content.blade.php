@@ -43,7 +43,7 @@
                 color:#808080;
                 "
                 id="alertas_device_overview"
-                class="count">veículos</div>
+                class="count">VEÍCULO</div>
                 
             </span>
             <a 

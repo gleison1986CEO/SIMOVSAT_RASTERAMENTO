@@ -3,6 +3,6 @@
 @section('header')
     <a style="text-decoration: none !important;">
         <i class="fa fa-calendar-check-o" id="icones_graficos" aria-hidden="true"></i>
-        <span id="grafico_titulos"> últimos alertas </span>
+        <span id="grafico_titulos"> ALERTA </span>
     </a>
 @stop

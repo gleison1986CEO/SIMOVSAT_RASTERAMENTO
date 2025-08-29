@@ -9,12 +9,12 @@ style="width: 200px; height: 300px; margin: auto; border-radius:20px;">
                 {
                     label: '{{ trans('global.online') }}',
                     data: {{ $online }},
-                    color: '#00cc00'
+                    color: '#3d00ccff'
                 },
                 {
                     label: '{{ trans('global.offline') }}',
                     data: {{ $offline }},
-                    color: '#e60000'
+                    color: '#e65c00ff'
                 }
                 
             ],
