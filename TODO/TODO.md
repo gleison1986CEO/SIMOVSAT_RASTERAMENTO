@@ -2,35 +2,20 @@
 - BAIXAR TUDO DA WEB (PHP SIMOVSAT) (OK)
 ---
 
-## API
-- VERIRICAR MÉTODO INADIMPLENTE E ADIMPLENTE
----
-
 ## WEB
 - ANOTAR O QUE COMBINEI COM ELE PRA FAZER AQUI
-- CORREÇÕES ANOTAR AQUI (VALOR 1500)
-- CORREÇÕES ANOTAR AQUI (VALOR 1000)
+- CORREÇÕES ANOTAR AQUI (VALOR 1200) CORREÇÕES KARINA
+- CORREÇÕES ANOTAR AQUI (VALOR 1000) CORREÇÕES GILBERTO
 ---
 
-## OBJETIVO
-- Corrigir ordenação de parada e exibir placa do veículo nos relatórios
----
-
-## REGRAS  SOLUÇÃO 01
+## REGRAS 
 - NO RELATÓRIO MUDAR NOME DO USUARIO PARA PLACA
 - LOGO MARCA NA APARECE EM ALGUNS PONTOS DO SISTEMA
-- VALOR 300
 ---
 
-
-## REGRAS  SOLUÇÃO 02
-- REGRAS DO GRÁFICO ESTAO ERRADAS E PRECISAM DE CORREÇÃO
+## DETALHES (FALTA SÓ ESSE)
+- Corrigir ordenação de parada e exibir placa do veículo nos relatórios
 - ESSE GRÁFICO É AQUELE QUE FIZEMOS DA OUTRA VEZ(EXTERNO E CORRIGIDO) E PERDEMOS PQ O SERVIDOR FOI APAGADO.
-- VALOR 1000
-- PRAZO 12 DIAS "UTEIS".
----
-
-## DETALHES
 - Correção da ordenação da coluna “Duração da parada” – Tela principal Veículo(s) Off-line (SimovSat)
 
 <!-- 
@@ -60,4 +45,10 @@ Se estiver usando uma lib de tabela como Vue Table, AG Grid ou similar:
 rows.sort((a, b) => parseTimeToSeconds(b.duracaoParada) - parseTimeToSeconds(a.duracaoParada));
 🎯 Resultado esperado:
 Ao aplicar essa regra, a coluna “Duração da parada” será corretamente ordenada do maior tempo para o menor, mesmo que visualmente continue aparecendo no formato "XXh YYmin ZZs". -->
+---
+
+
+
+## API
+- VERIRICAR MÉTODO INADIMPLENTE E ADIMPLENTE
 ---
