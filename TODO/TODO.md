@@ -1,6 +1,38 @@
 # SIMOVSAT
 - BAIXAR TUDO DA WEB (PHP SIMOVSAT) (OK)
 ---
+## FAZER
+
+- CRIAR MODELO DE ESTOQUE BASEADO NESSE MODELO. APARTIR DO MODELO DE CHIP E RASTERADOR!
+- VERFICAR FUNÇÃO ADIMPLENTE E INADINPLENTE! Se parou de funcionar ou não!
+---
+
+## DETALHES (FALTA SÓ ESSE)
+- Gráfico precisa contar os que mais rodaram, maior quilometragem da plataforma
+- Correção da ordenação da coluna “Duração da parada” – Tela principal Veículo(s) Off-line (SimovSat)
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## WEB
 - ANOTAR O QUE COMBINEI COM ELE PRA FAZER AQUI
@@ -14,9 +46,6 @@
 - Corrigir ordenação de parada e exibir placa do veículo nos relatórios
 ---
 
-## DETALHES (FALTA SÓ ESSE)
-- Gráfico precisa contar os que mais rodaram, maior quilometragem da plataforma
-- Correção da ordenação da coluna “Duração da parada” – Tela principal Veículo(s) Off-line (SimovSat)
 
 <!-- 
 Problema:
