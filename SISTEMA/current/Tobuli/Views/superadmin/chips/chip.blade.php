@@ -26,7 +26,6 @@
                 <th>OPERADORA</th>
                 <th>TELEFONE</th>
                 <th>DATA/HORA</th>
-                
   
                 <th>
              
