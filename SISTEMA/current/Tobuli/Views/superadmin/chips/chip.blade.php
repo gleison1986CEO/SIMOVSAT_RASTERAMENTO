@@ -22,10 +22,10 @@
               <thead>
             <tr>
                 <th>ID</th>
-                <th>fornecedor</th>
-                <th>operadora</th>
-                <th>número</th>
-                <th>data/hora</th>
+                <th>FORNECEDOR/EMPRESA</th>
+                <th>OPERADORA</th>
+                <th>TELEFONE</th>
+                <th>DATA/HORA</th>
                 
   
                 <th>

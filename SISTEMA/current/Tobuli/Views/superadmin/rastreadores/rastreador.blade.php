@@ -24,10 +24,10 @@
               <thead>
             <tr>
                 <th>ID</th>
-                <th>modelo</th>
-                <th>imei</th>
-                <th>data</th>
-                <th>equipamento</th>
+                <th>MODELO RASTREADOR</th>
+                <th>IMEI RASTREADOR</th>
+                <th>DATA/HORA</th>
+                <th>CONDIÇÕES DO EQUIPAMENTO</th>
 
   
                 <th>
