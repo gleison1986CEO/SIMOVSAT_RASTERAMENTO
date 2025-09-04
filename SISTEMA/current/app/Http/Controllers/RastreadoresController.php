@@ -17,9 +17,15 @@ class RastreadoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $rastreador = Rastreadores::all();
+
+        $search = $request->input('search');
+        $rastreador= Rastreadores::query()
+            ->where('imei', 'LIKE', "%{$search}%")
+            ->orWhere('modelo', 'LIKE', "%{$search}%")
+            ->orWhere('equipamento', 'LIKE', "%{$search}%")
+            ->get();          
         return view('superadmin.rastreadores.rastreador', compact('rastreador'));
     }
 

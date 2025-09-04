@@ -15,6 +15,7 @@
 - Correção da ordenação da coluna “Duração da parada” – Tela principal Veículo(s) Off-line (SimovSat)
 ---
 
+FINALIZAR E COBRAR 1200 + 1000;
 
 
 

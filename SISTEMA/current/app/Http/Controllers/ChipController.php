@@ -17,9 +17,14 @@ class ChipController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $chip = Chip::all();
+        $search = $request->input('search');
+        $chip= Chip::query()
+            ->where('fornecedor', 'LIKE', "%{$search}%")
+            ->orWhere('operadora', 'LIKE', "%{$search}%")
+            ->orWhere('numero', 'LIKE', "%{$search}%")
+            ->get();        
         return view('superadmin.chips.chip', compact('chip'));
     }
 
@@ -52,10 +57,7 @@ class ChipController extends Controller
             
                 'fornecedor' => $request->fornecedor,
                 'operadora' => $request->operadora,
-                'numero' => $request->numero,
-                'imei' => $request->imei,
-                'modelo' => $request->modelo,
-                'equipamento' => $request->equipamento                
+                'numero' => $request->numero             
             ]);
             $chip->save();
 

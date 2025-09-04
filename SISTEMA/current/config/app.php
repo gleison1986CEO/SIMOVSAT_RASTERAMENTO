@@ -274,14 +274,19 @@ $result = [
         'fornecedor',
         'operadora',
         'numero',
-		'imei',
-        'modelo',
-        'equipamento'
     ],
 	'db_fields_rastreadores' => [
         'imei',
         'modelo',
         'equipamento'
+    ],
+	'db_fields_estoque' => [
+        'iccid',
+        'chip',
+		'imei',
+        'modelo',
+		'hash',
+		'status'
     ]
 ];
 

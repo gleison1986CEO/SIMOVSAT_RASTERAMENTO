@@ -4,27 +4,38 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\ChipController;
 use App\Http\Controllers\RastreadoresController;
+use App\Http\Controllers\EstoqueController;
 use App\Models\Chip;
+use App\Models\Rastreadoress;
+use App\Models\Estoque;
 	
-
 //chip e rastreadores super administradores
-
 
 $router->group(['middleware' => ['auth']], function($router) {
 
 
     Route::resource('admin/users/clients/chip','ChipController');
     Route::resource('admin/users/clients/rastreadores','RastreadoresController');
+    Route::resource('admin/users/clients/estoque','EstoqueController');
 
     Route::get('admin/users/clients/importar_rastreadores', 'ImportController@getImport_rastreadores')->name('import_rastreadores');
     Route::post('admin/users/clients/tratamento_importacao_rastreadores', 'ImportController@parseImport_rastreadores')->name('import_parse_rastreadores');
     Route::post('admin/users/clients/importacao_realizada_rastreadores', 'ImportController@processImport_rastreadores')->name('import_process_rastreadores');
 
+
+    Route::get('admin/users/clients/importar_estoque', 'ImportController@getImport_estoque')->name('import_estoque');
+    Route::post('admin/users/clients/tratamento_importacao_estoque', 'ImportController@parseImport_estoque')->name('import_parse_estoque');
+    Route::post('admin/users/clients/importacao_realizada_estoque', 'ImportController@processImport_estoque')->name('import_process_estoque');
+
+    
     Route::get('admin/users/clients/importar_chips', 'ImportController@getImport')->name('import');
     Route::post('admin/users/clients/tratamento_importacao', 'ImportController@parseImport')->name('import_parse');
     Route::post('admin/users/clients/importacao_realizada', 'ImportController@processImport')->name('import_process');
     ## rota de error
+
     Route::get('admin/users/clients/error', 'ChipController@error')->name('error');
+    Route::get('admin/users/clients/error', 'EstoqueController@error')->name('error');
+    Route::get('admin/users/clients/error', 'RastreadoresController@error')->name('error');
     Route::get('admin/users/clients/error_import', 'ImportController@error')->name('error');
     
 

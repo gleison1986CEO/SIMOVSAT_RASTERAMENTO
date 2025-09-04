@@ -11,8 +11,7 @@ class Chip extends Model
         'fornecedor',
         'operadora',
         'numero',
-        'imei',
-        'modelo',
-        'equipamento'
     ];
 }
+
+

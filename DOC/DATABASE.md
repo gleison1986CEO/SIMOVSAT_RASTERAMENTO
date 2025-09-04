@@ -21,6 +21,21 @@ ALTER TABLE chips ADD modelo varchar(755) null;
 ALTER TABLE chips ADD equipamento varchar(755) null; 
 ---
 
+ALTER TABLE estoques ADD COLUMN status VARCHAR(250) null;
+
+## PADRÃO DE TABELAS LARAVEL;
+CREATE TABLE estoques(
+    id INT NOT NULL AUTO_INCREMENT,
+    iccid VARCHAR(550) null,
+    chip VARCHAR(550) null,
+    imei VARCHAR(550) null,
+    modelo VARCHAR(550) null,
+    hash VARCHAR(750) null,
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+    created_at TIMESTAMP NOT NULL,
+    PRIMARY KEY(id)
+);
+---
 ## DATABASES
 
 +---------------------+
